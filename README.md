@@ -40,54 +40,63 @@ In your terminal, pull and run the model:
 
 ```bash
 ollama run llama3.2
-You can change the model in ChatController.java.
+```
 
-2. Clone the Repo
-bash
-Copy
-Edit
-git clone https://github.com/your-username/customer-support-bot-java.git
-cd customer-support-bot-java
-3. Run the App
-bash
-Copy
-Edit
+💡 You can change the model in ChatController.java.
+
+### 2. Clone the Repo
+
+```bash
+git clone https://github.com/your-username/customer-care-bot.git
+cd customer-care-bot
+```
+
+### 3. Run the App
+
+```bash
 mvn spring-boot:run
-The backend will be available at:
-http://localhost:8080/support
+```
 
-🛠 API
-POST /support
+The backend will be available at:
+http://localhost:8080/chat/support
+
+---
+
+## 🛠 API
+
+POST /chat/support
+
 Send user message to the bot.
 
 Request Body:
-
+```bash
 json
-Copy
-Edit
+
 {
   "message": "How do I create a REST API with Spring Boot?"
 }
+```
 Response:
-
+```bash
 json
-Copy
-Edit
 {
   "response": "To create a REST API with Spring Boot..."
 }
-✨ Tech Stack
-Java 21
+```
 
-Spring Boot
+---
 
-LangChain4j
+## ✨ Tech Stack
 
-Ollama
+- Java 21
+- Spring Boot
+- LangChain4j
+- Ollama
+- LLaMA 3.2 (default)
 
-LLaMA 3.2 (default)
+---
 
-📌 Customization
-Update your SystemMessage in CustomerSupportBot.java to change the bot's personality or domain.
+## 📌 Customization
 
-Use any frontend (React, Angular, etc.) to connect with the /support endpoint.
+- Update the SystemMessage in CustomerSupportBot.java to change the bot's tone or domain knowledge.
+- You can use any frontend framework (React, Angular, etc.) to connect with the /chat/support endpoint.
